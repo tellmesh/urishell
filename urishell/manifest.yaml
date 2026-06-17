@@ -1,0 +1,13 @@
+id: urishell
+version: 1
+scheme: shell
+description: Subprocess shell commands on the automation host.
+uri_patterns:
+  - pattern: shell://{command}
+    kind: command
+    operation: shell.run
+    side_effects: true
+    approval: required
+handlers:
+  python:
+    shell.run: python://urishell.handlers:shell_run
